@@ -93,7 +93,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Todo = () => {
-    const [inputList, setInputList] = useState("");
+    const [inputList, setInputList] = useState([""]);
     const [listItem, setListItem] = useState([]);
 
     const {
@@ -136,6 +136,7 @@ const Todo = () => {
                 return i !== id;
             })
         })
+        firebase.database().ref('list/').remove(inputList)
         alert("Deleted")
     }
     return (
