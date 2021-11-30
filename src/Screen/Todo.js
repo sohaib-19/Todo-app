@@ -93,7 +93,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Todo = () => {
-    const [inputList, setInputList] = useState([""]);
+    const [inputList, setInputList] = useState([]);
     const [listItem, setListItem] = useState([]);
 
     const {
